@@ -24,9 +24,7 @@ public class Atividade {
     private List<Bloco> blocos = new ArrayList<>();
 
     @ManyToMany
-    @JoinTable(name = "tb_atividade_categoria",
-                joinColumns = @JoinColumn(name = "atividade_id"),
-            inverseJoinColumns = @JoinColumn(name = "participante_id"))
+    @JoinTable(name = "tb_atividade_categoria", joinColumns = @JoinColumn(name = "atividade_id"), inverseJoinColumns = @JoinColumn(name = "participante_id"))
     private Set<Participante> participantes = new HashSet<>();
 
     public Atividade() {
